@@ -1,0 +1,6 @@
+{% for image in images %}
+    <div>
+        <h2>{{ image.image_name }}</h2>
+        <p>Tags: {% for tag in image.tags.all %}{{ tag.name }}{% if not forloop.last %}, {% endif %}{% endfor %}</p>
+    </div>
+{% endfor %}
